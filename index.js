@@ -1,19 +1,21 @@
 // add
 function add(x,y) {
-    console.log(x + y);
+    return  x + y;
+    
 }
-add(2,4)
+
+console.log(add(2,4));
 
 // multiply
 function multiply(a,b) {
     let result = 0;
     for (let i = 0; i < a; i++) {
-    result = result + b;
+    result = add(result, b);
 }
 
 return result;
 }
-console.log(multiply(6,8))
+console.log(multiply(6,8), "this is multiply")
 
 // power
 function power(a,b) {
@@ -70,5 +72,17 @@ var fibonacci_series= function (n)
   }
 };
 
+function realfibonacci(x) {
+    let a = 0
+    let b = 1
+    let c = 0
+    for(let i = 0; i < x; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+    } return c;
+    
+}
+console.log(realfibonacci(6));
  console.log(fibonacci_series(7));
  
